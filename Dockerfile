@@ -31,7 +31,10 @@ RUN pip install pip -U \
         h5py==3.10.0 \
         pandas==2.1.4 \
         fairscale==0.4.13 \
-        torchmetrics==0.8.2
+        torchmetrics==0.8.2 \
+        onnx==1.15.0 \
+        onnxsim==0.4.33 \
+        onnxruntime-gpu==1.16.1
 
 ENV USERNAME=user
 RUN echo "root:root" | chpasswd \
