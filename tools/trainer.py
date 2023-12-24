@@ -90,6 +90,7 @@ def train(cfg: DictConfig) -> TrainOutput:
 
         else:
             print(f"Loading the state_dict from {cfg.pretrained_checkpoint}")
+            print(f'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ {os.getcwd()}')
             state_dict = torch.load(
                 open(cfg.pretrained_checkpoint, "rb"), map_location="cpu"
             )

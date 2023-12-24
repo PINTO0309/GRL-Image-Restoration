@@ -5,6 +5,17 @@ This repository is an official implementation of the paper Efficient and Explici
 By Yawei Li, Yuchen Fan, Xiaoyu Xiang, Denis Demandolx, Rakesh Ranjan, Radu Timofte, and Luc Van Gool
 
 
+```
+torchx run -- -j 1x1 -- \
+-m training=False gpus=1 experiment=db_motion/grl_p480 model=grl/grl_base model.fairscale_checkpoint=True tile=0 tile_overlap=0 \
+data_module.train.dataset=gopro data_module.val.dataset=gopro+hide \
+load_state_dict=True pretrained_checkpoint="/workspaces/GRL-Image-Restoration/GRL/db_motion_grl_base_gopro.ckpt"
+```
+
+---
+---
+---
+
 ## News
 - `Mar 20, 2023`: 🚀 GRL is released！
   - [ ] GRL-B/S/T model for image denosing.
@@ -65,43 +76,43 @@ synthetic settings. The proposed method sets the new state-of-the-art for severa
 <details>
 <summary><strong>Image denoising</strong> (click to expand) </summary>
 
-<img src = "./figs/task3.png" width=2000> 
+<img src = "./figs/task3.png" width=2000>
 </details>
 
 <details>
 <summary><strong>Image SR</strong> (click to expand) </summary>
 
-<img src = "./figs/task4.png" width=2000> 
+<img src = "./figs/task4.png" width=2000>
 </details>
 
 <details>
 <summary><strong>Single-Image Motion Deblur</strong> (click to expand) </summary>
 
-<img src = "./figs/task1.png" width=1000> 
+<img src = "./figs/task1.png" width=1000>
 </details>
 
 <details>
 <summary><strong>Defocus Deblur</strong> (click to expand) </summary>
 
-<img src = "./figs/task2.png" width=2000> 
+<img src = "./figs/task2.png" width=2000>
 </details>
 
 <details>
 <summary><strong>JPEG Compression Artifact Removal</strong> (click to expand) </summary>
 
-<img src = "./figs/task5.png" width=2000> 
+<img src = "./figs/task5.png" width=2000>
 </details>
 
 <details>
 <summary><strong>Image Demosaicking</strong> (click to expand) </summary>
 
-<img src = "./figs/task6.png" width=1000> 
+<img src = "./figs/task6.png" width=1000>
 </details>
 
 <details>
 <summary><strong>Real-World Image SR</strong> (click to expand) </summary>
 
-<img src = "./figs/task7.png" width=1000> 
+<img src = "./figs/task7.png" width=1000>
 </details>
 
 ## Citation
